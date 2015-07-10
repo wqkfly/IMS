@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="ichart.1.2.min.js"></script>
+		<script type="text/javascript">
+		var chart;
+			$(function(){
+				var data = [
+				        	{
+				        		name : '北京',
+				        		value:[2,12,14,20,28,32,34,36,33,24,14,4],
+				        		color:'#1f7e92'
+				        	}
+				       ];
+			       
+				 chart = new iChart.Area2D({
+						render : 'canvasDiv',
+						data: data,
+						turn_off_touchmove:true,
+						title : '北京2012年平均温度情况',
+						width : 800,
+						height : 400,
+						labels:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
+					});
+				
+				chart.draw();
+				
+				var data1 = [
+				        	{name : 'IE',value : 35.75,color:'#9d4a4a'},
+				        	{name : 'Chrome',value : 29.84,color:'#5d7f97'},
+				        	{name : 'Firefox',value : 24.88,color:'#97b3bc'},
+				        	{name : 'Safari',value : 6.77,color:'#a5aaaa'},
+				        	{name : 'Opera',value : 2.02,color:'#778088'},
+				        	{name : 'Other',value : 0.73,color:'#6f83a5'}
+			        	];
+	        	
+				new iChart.Pie2D({
+					render : 'pieDiv',
+					data: data1,
+					title : 'Top 5 Browsers from 1 to 29 Feb 2012',
+					legend : {
+						enable : true
+					},
+					showpercent:true,
+					decimalsnum:2,
+					width : 800,
+					height : 400,
+					radius:140
+				}).draw();
+				
+				new iChart.Column2D({
+						render : 'columnDiv',
+						data: data1,
+						title : 'Top 5 Browsers from 1 to 29 Feb 2012',
+						showpercent:true,
+						decimalsnum:2,
+						width : 800,
+						height : 400,
+						coordinate:{
+							background_color:'#fefefe',
+							scale:[{
+								 position:'left',	
+								 start_scale:0,
+								 end_scale:40,
+								 scale_space:8,
+								 listeners:{
+									parseText:function(t,x,y){
+										return {text:t+"%"}
+									}
+								}
+							}]
+						}
+					}).draw();
+				
+			});
+			
+			
+			function setContentInfo(data)  {  
+				var jsonObjects = eval(data);   //通过eval方法处理得到json对象数组  
+				chart.push("data",jsonObjects);
+				chart.setUp();
+				chart.draw();
+			}  
+  			
+		</script>
+		</head>
+		<body>
+			<div id='canvasDiv'></div>
+            <div id="pieDiv"></div>
+            <div id="columnDiv"></div>
+</body>
+</html>

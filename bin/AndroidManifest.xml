@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dhcc.ims"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS">
+    </uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.dhcc.ims.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.AddActivity"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.UpdateActivity"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.DetailActivity"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.Activity_all"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.Activity_one"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.Activity_two"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.Activity_three"
+            android:label="@string/app_name" >  
+        </activity>
+        <activity
+            android:name="com.dhcc.ims.Activity_menu"
+            android:label="@string/app_name" >  
+        </activity>
+        
+        <activity
+            android:name="com.dhcc.ims.Chart_HtmlActivity"
+            android:label="@string/app_name" >  
+        </activity>
+         <activity
+            android:name="com.dhcc.ims.DragActivity"
+            android:label="@string/app_name" >  
+        </activity>
+    </application>
+
+</manifest>

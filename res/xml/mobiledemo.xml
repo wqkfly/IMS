@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference 
+        android:dialogTitle="网络连接地址" 
+        android:summary="web地址" 
+        android:key="@string/webAddress" 
+        android:title="网络连接地址" 
+        android:defaultValue="http://10.1.20.61:8080/android_test/"/>
+    <EditTextPreference 
+        android:key="@string/defaultRecord" 
+        android:title="是否更新地址" 
+        android:defaultValue="Y"/>
+    
+
+</PreferenceScreen>
